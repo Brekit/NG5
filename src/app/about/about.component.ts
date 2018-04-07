@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ActivatedRoute} from '@angular/router'; //this allows to set and fetch angular route parameters
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) {
+    this.route.params.subscribe(res => console.log(res.id));
+  }
 
   ngOnInit() {
+
   }
+
 
 }
