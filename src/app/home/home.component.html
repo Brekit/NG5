@@ -10,8 +10,9 @@
   <div class="col">
     <p class="sm"> use this form below to add a new list goal. What do you want to do?</p>
 <form>
-  <input type="text" class="txt" name="item" placeholder="life goal..." />
-  <input type="submit" class="btn" value="Add Item" />
+  <input type="text" class="txt" name="item" placeholder="life goal..." [(ngModel)]="goalText">
+  <br /><span>{{goalText}}</span>
+  <input type="submit" class="btn" value="Add Item">
 </form>
   </div>
   <div class="col">
