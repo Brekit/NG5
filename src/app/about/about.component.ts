@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router'; //this allows to set and fetch angular route parameters
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-about',
@@ -14,6 +15,10 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
 
+  }
+
+  sendMeHome() {
+    this.router.navigate([''])
   }
 
 
